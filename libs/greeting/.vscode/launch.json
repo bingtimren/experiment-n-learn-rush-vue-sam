@@ -9,7 +9,7 @@
         "name": "Debug Active Jest Test",
         "runtimeArgs": [
           "--inspect-brk",
-          "${workspaceRoot}/node_modules/.bin/jest",
+          "${workspaceRoot}/node_modules/jest/bin/jest.js",
           "-c", "config/jest.config.js",
           "--runInBand",
           "${file}"

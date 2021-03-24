@@ -3,6 +3,7 @@
   "version": "1.0.0-alpha.0",
   "description": "A Typescript project template",
   "main": "build/main/index.js",
+  "types": "build/main/index.d.ts",
   "files": [
     "build/main"
   ],
