@@ -1,0 +1,43 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      // To debug, make sure a Jest test file is active in the editor, 
+      // then run a configuration
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Debug Active Jest Test",
+        "runtimeArgs": [
+          "--inspect-brk",
+          "${workspaceRoot}/node_modules/.bin/jest",
+          "-c", "config/jest.config.js",
+          "--runInBand",
+          "${file}"
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "port": 9229,
+        "outputCapture": "std",
+        "skipFiles": ["<node_internals>/**/*.js"],
+        "preLaunchTask": "npm: build"
+        // "smartStep": true
+      },
+      {
+        "name": "Debug All Jest Tests",
+        "type": "node",
+        "request": "launch",
+        "runtimeArgs": [
+          "--inspect-brk",
+          "${workspaceRoot}/node_modules/.bin/jest",
+          "-c", "config/jest.config.js",
+          "--runInBand"
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "outputCapture": "std",
+        "skipFiles": ["<node_internals>/**/*.js"],
+        "port": 9229,
+        "preLaunchTask": "npm: build"      
+      }
+    ]
+  }
