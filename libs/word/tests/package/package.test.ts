@@ -1,8 +1,8 @@
 // import from package with absolute path and test
-import {ONE} from '@bingsjs/ts-proj-template'
+import {WORD} from '@bingsjs/word'
 
 describe("package test",()=>{
     it("should be able to import from package with absolute path", ()=>{
-        expect(ONE).toEqual(1);
+        expect(typeof WORD).toEqual("string");
     })
 })

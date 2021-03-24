@@ -60,7 +60,7 @@
     "?todo": "search for any todo items (marked with 'TODO') in project files",
     "todo": "grep -r --color=always --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=build 'TODO' .",
     "?packlink": "pack the package, extract it under /build/pack, then npm link from there",
-    "packlink": "pinst --disable; rm -fr build/pack; FILENAME=`npm pack 2>&1|tail -n -1`; echo; echo PACKAGED: `ls $FILENAME -s -h`; mkdir -p build/pack; cd build/pack; tar -xzf ../../$FILENAME; cd package; npm link; cd ../../..; rm $FILENAME; pinst --enable",
+    "packlink": "rm -fr build/pack; FILENAME=`npm pack 2>&1|tail -n -1`; echo; echo PACKAGED: `ls $FILENAME -s -h`; mkdir -p build/pack; cd build/pack; tar -xzf ../../$FILENAME; cd package; npm link; cd ../../..; rm $FILENAME;",
     "?packagetest": "use npm link to install the packed package, then run tests under tests/package",
     "packagetest": "cd tests/package; npm install; npm link $npm_package_name; cd ../..; jest -c config/jest.config.package.js",
     "?cbt": "clean - build - test",
@@ -68,18 +68,8 @@
     "?release": "do a release dry-run when not invoked with --execute, otherwise do a release",
     "release": "config/scripts/release.sh"
   },
-  "repository": {
-    "type": "git",
-    "TODO": "set the correct repository url then remove this TODO",
-    "url": "git+https://github.com/bingtimren/ts-proj-template.git"
-  },
-  "TODO-5": "set author, license, bug report url, home page, then remove this TODO",
   "author": "Bing Ren",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bingtimren/ts-proj-template/issues"
-  },
-  "homepage": "https://github.com/bingtimren/ts-proj-template#readme",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

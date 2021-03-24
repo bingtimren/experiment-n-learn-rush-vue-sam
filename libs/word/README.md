@@ -1,8 +1,3 @@
-[![Build and Test](https://github.com/bingtimren/ts-proj-template/actions/workflows/build-test.js.yml/badge.svg)](https://github.com/bingtimren/ts-proj-template/actions/workflows/build-test.js.yml)
-[![Release](https://github.com/bingtimren/ts-proj-template/actions/workflows/publish.yml/badge.svg)](https://github.com/bingtimren/ts-proj-template/actions/workflows/publish.yml)
-
-[//]: # (TODO: replace badges with badges of your own project)
-
 # My Typescript Project Template
 
 Features:
