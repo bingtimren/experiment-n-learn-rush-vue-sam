@@ -34,7 +34,7 @@
   "scripts": {
     "info": "npm-scripts-info",
     "?clean": "clean up project",
-    "clean": "rm -fr build; rm -fr tests/package/node_modules; rm -fr tests/package/package-lock.json; npm unlink -g $npm_package_name; ",
+    "clean": "rm -fr build",
     "test": "run-s test:* packlink packagetest",
     "test:unit": "jest -c config/jest.config.js --collectCoverage",
     "test:lint": "eslint src -c config/.eslintrc.js --ext .js,.jsx,.ts,.tsx",

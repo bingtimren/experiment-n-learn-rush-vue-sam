@@ -1,6 +1,7 @@
 dependencies:
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
+  '@rush-temp/greeting': file:projects/greeting.tgz
   '@rush-temp/word': file:projects/word.tgz
   '@types/jest': 26.0.21
   '@typescript-eslint/eslint-plugin': 4.19.0_f26dcf5ec38a04241b14c26bc931244e
@@ -7285,6 +7286,37 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+  file:projects/greeting.tgz:
+    dependencies:
+      '@commitlint/cli': 11.0.0
+      '@commitlint/config-conventional': 11.0.0
+      '@types/jest': 26.0.21
+      '@typescript-eslint/eslint-plugin': 4.19.0_f26dcf5ec38a04241b14c26bc931244e
+      '@typescript-eslint/parser': 4.19.0_eslint@7.22.0+typescript@4.2.3
+      commitizen: 4.2.3
+      cz-conventional-changelog: 3.3.0
+      dependency-cruiser: 9.24.0
+      eslint: 7.22.0
+      eslint-config-prettier: 8.1.0_eslint@7.22.0
+      eslint-plugin-prettier: 3.3.1_44b94358ac15c7c093df3d5421ccc811
+      gh-pages: 3.1.0
+      jest: 26.6.3
+      markdown-folder-to-html: 2.4.0
+      npm-run-all: 4.1.5
+      npm-scripts-info: 0.3.9
+      open-cli: 6.0.1
+      prettier: 2.2.1
+      standard-version: 9.1.1
+      ts-jest: 26.5.4_jest@26.6.3+typescript@4.2.3
+      ts-purify: 2.0.2
+      typedoc: 0.20.33_typescript@4.2.3
+      typescript: 4.2.3
+    dev: false
+    name: '@rush-temp/greeting'
+    resolution:
+      integrity: sha512-2Y2emgiAM0hhz8LlyS0VKb+elVfSGImSDmSY6qa2zYzXwhIeDR0+mOvheGb2c09e4lC0HInVho2VQuE3F7vFQQ==
+      tarball: file:projects/greeting.tgz
+    version: 0.0.0
   file:projects/word.tgz:
     dependencies:
       '@commitlint/cli': 11.0.0
@@ -7316,9 +7348,11 @@ packages:
       integrity: sha512-zYC89Yt2jKb0Ik3o6lWpTZpG8PbfmJK+rnxhawh2bn0h43V0z1vA9l8iZobg8/GV9Oo3FyCuAUA65+StvCql5A==
       tarball: file:projects/word.tgz
     version: 0.0.0
+registry: ''
 specifiers:
   '@commitlint/cli': ^11.0.0
   '@commitlint/config-conventional': ^11.0.0
+  '@rush-temp/greeting': file:./projects/greeting.tgz
   '@rush-temp/word': file:./projects/word.tgz
   '@types/jest': ^26.0.20
   '@typescript-eslint/eslint-plugin': ^4.15.1

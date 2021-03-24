@@ -392,6 +392,10 @@
     {
       "packageName": "@bingsjs/word",
       "projectFolder": "libs/word"
+    },
+    {
+      "packageName": "@bingsjs/greeting",
+      "projectFolder": "libs/greeting"
     }
     // {
     //   /**
