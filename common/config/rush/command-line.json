@@ -11,6 +11,21 @@
    * "rush my-global-command --help".
    */
   "commands": [
+    {
+      "commandKind": "bulk",
+      "name":"test",
+      "summary": "run tests",
+      "description": "This is an example custom command that runs separately for each project",
+      "safeForSimultaneousRushProcesses": false,
+      "enableParallelism": false,
+      "ignoreDependencyOrder": false,
+      "ignoreMissingScript": false,
+      "allowWarningsInSuccessfulBuild": true,
+      "incremental": false
+      // "watchForChanges": false,
+      // "disableBuildCache ": false
+      
+    }
     // {
     //   /**
     //    * (Required) Determines the type of custom command.

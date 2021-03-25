@@ -396,6 +396,10 @@
     {
       "packageName": "@bingsjs/greeting",
       "projectFolder": "libs/greeting"
+    },
+    {
+      "packageName":"vue-app",
+      "projectFolder": "apps/vue-app"
     }
     // {
     //   /**
