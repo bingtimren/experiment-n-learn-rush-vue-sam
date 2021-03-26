@@ -400,6 +400,10 @@
     {
       "packageName":"vue-app",
       "projectFolder": "apps/vue-app"
+    },
+    {
+      "packageName": "sam-app",
+      "projectFolder": "apps/sam-app"
     }
     // {
     //   /**

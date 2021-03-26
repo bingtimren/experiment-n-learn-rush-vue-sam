@@ -20,7 +20,7 @@ Lesson learnt:
 
 ## Vue+Vite
 
-### Using pnpm
+See https://github.com/vitejs/vite/issues/2697
 
 After `rush update`, change to /apps/vue-app directory, run `pnpm dev` and check local webpage. Console shows "Uncaught SyntaxError: The requested module '/@fs/home/bing/tech-playground/rush/libs/greeting/build/main/index.js' does not provide an export named 'greeting'"
 
@@ -47,3 +47,9 @@ It works!
 CONCLUSION: Vite has problem with rush's SYMBOL LINKING but has no problem with the non-flat node_modules directory
 
 Try building, restore state to after `rush update`, run `npx vite build`, error. 
+
+THE WORK-AROUND:
+
+add linked modules to "optimizeDeps.include" in vite.config.ts. This makes dev works but build still does NOT work
+
+
