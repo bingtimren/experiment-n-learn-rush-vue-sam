@@ -53,3 +53,29 @@ THE WORK-AROUND:
 add linked modules to "optimizeDeps.include" in vite.config.ts. This makes dev works but build still does NOT work
 
 
+## SAM
+
+I modified 'get-by-id' function to remove dependency on any resource (dynamoDB) but depend on @bingsjs/greeting, a linked package in monorepo.
+
+`sam build` fails - because sam build invokes npm install, and the dependency is not published. This is not just monorepo, SAM build has problem with all packages not published & available through npm install.
+
+```
+npm ERR! 404 Not Found - GET https://registry.npmjs.org/@bingsjs%2fgreeting - Not found
+npm ERR! 404 
+npm ERR! 404  '@bingsjs/greeting@~1.0.0-alpha.0' is not in the npm registry.
+```
+
+`sam local start-api` initially does not work
+
+```
+2021-03-29T03:31:11.496Z        undefined       ERROR   Uncaught Exception      {"errorType":"Runtime.ImportModuleError","errorMessage":"Error: Cannot find module '@bingsjs/greeting'\
+```
+
+after `source fixme` to replace symbol linked package with local copied package, without restart sam, it works
+
+so `sam start local` does not rely on build! 
+Observation: 
+(1) if I use another package in monorepo, `sam local start-api` shows message `Mounting /home/bing/tech-playground/rush/apps/sam-app as /var/task:ro,delegated inside runtime container` , the root dir is mounted as task root. 
+(2) if I remove @bingsjs/greeting in dependency, `sam build` will pass, then `sam local start-api` shows message `Mounting /home/bing/tech-playground/rush/apps/sam-app/.aws-sam/build/getByIdFunction as /var/task:ro,delegated inside runtime container`, mounting built dir as task root
+
+I can use `sam local start-api` without build, but still symbol link is not accepted
