@@ -8,6 +8,8 @@ dependencies:
   '@rush-temp/sam-app': file:projects/sam-app.tgz_ts-node@9.1.1
   '@rush-temp/vue-app': file:projects/vue-app.tgz
   '@rush-temp/word': file:projects/word.tgz_ts-node@9.1.1
+  '@tsconfig/node14': 1.0.0
+  '@types/aws-lambda': 8.10.73
   '@types/jest': 26.0.21
   '@types/node': 10.17.27
   '@typescript-eslint/eslint-plugin': 4.19.0_f26dcf5ec38a04241b14c26bc931244e
@@ -66,6 +68,9 @@ packages:
     bundledDependencies:
       - jsonschema
       - semver
+    dependencies:
+      jsonschema: 1.4.0
+      semver: 7.3.5
     dev: false
     engines:
       node: '>= 10.13.0 <13 || >=13.7.0'
@@ -94,7 +99,11 @@ packages:
       '@aws-cdk/cloud-assembly-schema': 1.95.1
       '@aws-cdk/cx-api': 1.95.1
       '@aws-cdk/region-info': 1.95.1
+      '@balena/dockerignore': 1.0.2
       constructs: 3.3.71
+      fs-extra: 9.1.0
+      ignore: 5.1.8
+      minimatch: 3.0.4
     dev: false
     engines:
       node: '>= 10.13.0 <13 || >=13.7.0'
@@ -105,6 +114,7 @@ packages:
       - semver
     dependencies:
       '@aws-cdk/cloud-assembly-schema': 1.95.1
+      semver: 7.3.5
     dev: false
     engines:
       node: '>= 10.13.0 <13 || >=13.7.0'
@@ -428,6 +438,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-K4nY2xFN4QMvQwkQ+zmBDp6ANMbVNw6BbxWmYA4qNjhR9W+Lj/8ky5MEY2Me5r+B2c6/v6F53oMndG+f9s3IiA==
+  /@balena/dockerignore/1.0.2:
+    dev: false
+    resolution:
+      integrity: sha512-wMue2Sy4GAVTk6Ic4tJVcnfdau+gx2EnG7S+uAEe+TWJFqE4YoWN4/H8MSLj4eYJKxGg26lZwboEniNiNwZQ6Q==
   /@bcoe/v8-coverage/0.2.3:
     dev: false
     resolution:
@@ -904,6 +918,14 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
+  /@tsconfig/node14/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-RKkL8eTdPv6t5EHgFKIVQgsDapugbuOptNd9OOunN/HAkzmmTnZELx1kNCK0rSdUYGmiFMM3rRQMAWiyp023LQ==
+  /@types/aws-lambda/8.10.73:
+    dev: false
+    resolution:
+      integrity: sha512-P+a6TRQbRnVQOIjWkmw6F23wiJcF+4Uniasbzx7NAXjLQCVGx/Z4VoMfit81/pxlmcXNxAMGuYPugn6CrJLilQ==
   /@types/babel__core/7.1.14:
     dependencies:
       '@babel/parser': 7.13.12
@@ -2194,6 +2216,7 @@ packages:
     resolution:
       integrity: sha512-Nhl1wzCslqXYTJVDyJCu3ODohy9OfBMB5uD2BiBTzd7w+QY0lBzafkR8y8755yMYHAaMD4NuzbAw03/xzfw+eQ==
   /constructs/3.3.71:
+    bundledDependencies: []
     dev: false
     engines:
       node: '>= 10.17.0'
@@ -5150,6 +5173,10 @@ packages:
       '0': node >= 0.2.0
     resolution:
       integrity: sha1-P02uSpH6wxX3EGL4UhzCOfE2YoA=
+  /jsonschema/1.4.0:
+    dev: false
+    resolution:
+      integrity: sha512-/YgW6pRMr6M7C+4o8kS+B/2myEpHCrxO4PEWnqJNBFMjn7EWXqlQ4tGwL6xTHeRplwuZmcAncdvfOad1nT2yMw==
   /jsprim/1.4.1:
     dependencies:
       assert-plus: 1.0.0
@@ -8518,6 +8545,8 @@ packages:
     dependencies:
       '@aws-cdk/assert': 1.95.1_jest@26.6.3
       '@aws-cdk/core': 1.95.1
+      '@tsconfig/node14': 1.0.0
+      '@types/aws-lambda': 8.10.73
       '@types/jest': 26.0.21
       '@types/node': 10.17.27
       aws-cdk: 1.95.1
@@ -8529,7 +8558,7 @@ packages:
     dev: false
     name: '@rush-temp/cdk-app'
     resolution:
-      integrity: sha512-6RCEkWBG08Lt6NQ/E7qZ2sdL2M6BgWW0kvH6QrvKuR4Dd6MYp39+joW2KHPyMMeyuUgi9C0Tq9gSNW4EoeWc4A==
+      integrity: sha512-4oOak/0Ge0BHPv01VifYr19pxyo4wEzGizFGqumXcv/UlQsZM+TdZwEvCh8D2E2TEU9D96UbC9DjHmbWbgU/Fw==
       tarball: file:projects/cdk-app.tgz
     version: 0.0.0
   file:projects/greeting.tgz_ts-node@9.1.1:
@@ -8639,6 +8668,8 @@ specifiers:
   '@rush-temp/sam-app': file:./projects/sam-app.tgz
   '@rush-temp/vue-app': file:./projects/vue-app.tgz
   '@rush-temp/word': file:./projects/word.tgz
+  '@tsconfig/node14': ~1.0.0
+  '@types/aws-lambda': ~8.10.73
   '@types/jest': ^26.0.20
   '@types/node': 10.17.27
   '@typescript-eslint/eslint-plugin': ^4.15.1
