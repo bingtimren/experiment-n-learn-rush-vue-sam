@@ -404,6 +404,10 @@
     {
       "packageName": "sam-app",
       "projectFolder": "apps/sam-app"
+    },
+    {
+      "packageName": "cdk-app",
+      "projectFolder": "apps/cdk-app"
     }
     // {
     //   /**
