@@ -79,3 +79,7 @@ Observation:
 (2) if I remove @bingsjs/greeting in dependency, `sam build` will pass, then `sam local start-api` shows message `Mounting /home/bing/tech-playground/rush/apps/sam-app/.aws-sam/build/getByIdFunction as /var/task:ro,delegated inside runtime container`, mounting built dir as task root
 
 I can use `sam local start-api` without build, but still symbol link is not accepted
+
+## CDK
+
+Without using symbol linked dependencies, simple api-gateway integration with lambda works, `cdk synth` and `cdk deploy` works as expected
