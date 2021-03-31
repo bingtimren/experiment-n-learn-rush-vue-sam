@@ -82,4 +82,10 @@ I can use `sam local start-api` without build, but still symbol link is not acce
 
 ## CDK
 
-Without using symbol linked dependencies, simple api-gateway integration with lambda works, `cdk synth` and `cdk deploy` works as expected
+Without any dependency, simple api-gateway integration with one-file lambda works, `cdk synth` and `cdk deploy` works as expected
+
+The problem is when with dependencies, the examples given by CDK document is insufficient. Check https://sites.google.com/site/bingsite/aws/tools/cdk. The problem is about bundling lambda.
+
+FIX 1:
+
+apps/cdk-app/fix.sh copies dependencies to the build/lambdas dir and COULD solve the issue - however, the tree has too much other files and the size is too big, needs manual trim the files to a smaller size. Not really a solution but as a success proof of idea.

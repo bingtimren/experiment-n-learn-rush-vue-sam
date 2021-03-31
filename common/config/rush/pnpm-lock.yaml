@@ -1,6 +1,6 @@
 dependencies:
   '@aws-cdk/assert': 1.95.1_jest@26.6.3
-  '@aws-cdk/aws-apigatewayv2': 1.95.1
+  '@aws-cdk/aws-apigateway': 1.95.1
   '@aws-cdk/aws-lambda': 1.95.1
   '@aws-cdk/core': 1.95.1
   '@commitlint/cli': 11.0.0
@@ -14,6 +14,7 @@ dependencies:
   '@types/aws-lambda': 8.10.73
   '@types/jest': 26.0.21
   '@types/node': 10.17.27
+  '@types/string': 0.0.30
   '@typescript-eslint/eslint-plugin': 4.19.0_f26dcf5ec38a04241b14c26bc931244e
   '@typescript-eslint/parser': 4.19.0_eslint@7.22.0+typescript@4.2.3
   '@vitejs/plugin-vue': 1.1.5_@vue+compiler-sfc@3.0.7
@@ -35,6 +36,7 @@ dependencies:
   prettier: 2.2.1
   source-map-support: 0.5.19
   standard-version: 9.1.1
+  string: 3.3.3
   ts-jest: 26.5.4_jest@26.6.3+typescript@4.2.3
   ts-node: 9.1.1_typescript@4.2.3
   ts-purify: 2.0.2
@@ -181,6 +183,7 @@ packages:
       '@aws-cdk/core': 1.95.1
       '@aws-cdk/custom-resources': 1.95.1
       constructs: 3.3.71
+      punycode: 2.1.1
     dev: false
     engines:
       node: '>= 10.13.0 <13 || >=13.7.0'
@@ -1404,6 +1407,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-RJJrrySY7A8havqpGObOB4W92QXKJo63/jFLLgpvOtsGUqbQZ9Sbgl35KMm1DjC6j7AvmmU2bIno+3IyEaemaw==
+  /@types/string/0.0.30:
+    dev: false
+    resolution:
+      integrity: sha512-K+/vx/ecGT5XMoJzXUTIcAokuyLZIDI+8+Tgt+Tn7CjOZ4ud/fi54Zo4k4yJmiTOLPsKQWsIDPKBstD54ovj+Q==
   /@types/yargs-parser/20.2.0:
     dev: false
     resolution:
@@ -7861,6 +7868,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-jh6e984OBfvxS50tdY2nRZnoC5/mLFKOREQfw8t5yytkoUsJRNxvI/E39qu1sD0OtWI3OC0XgKSmcWwziwYuZw==
+  /string/3.3.3:
+    dev: false
+    resolution:
+      integrity: sha1-XqIRzZLSKOGEKUmQpsyXs2anfLA=
   /string_decoder/0.10.31:
     dev: false
     resolution:
@@ -8932,16 +8943,18 @@ packages:
       '@types/aws-lambda': 8.10.73
       '@types/jest': 26.0.21
       '@types/node': 10.17.27
+      '@types/string': 0.0.30
       aws-cdk: 1.95.1
       jest: 26.6.3_ts-node@9.1.1
       source-map-support: 0.5.19
+      string: 3.3.3
       ts-jest: 26.5.4_jest@26.6.3+typescript@4.2.3
       ts-node: 9.1.1_typescript@4.2.3
       typescript: 4.2.3
     dev: false
     name: '@rush-temp/cdk-app'
     resolution:
-      integrity: sha512-9t7s+uo7T99FVGn5jYQmSKrBzgaOb+YfBgHKWL91RwRH9UjHCaE5XjDIP7aDcptRSTe2J1f+NZZzMeQntQuiOg==
+      integrity: sha512-rAI68p4Vpq7YU0VsJrXHEaNqOGzmmovZKTWVJVfCCio4fBpw1HCnYvWvFvBQheWmP7iu1L8DjrS7b9r4mIFe7Q==
       tarball: file:projects/cdk-app.tgz
     version: 0.0.0
   file:projects/greeting.tgz_ts-node@9.1.1:
@@ -9043,7 +9056,7 @@ packages:
 registry: ''
 specifiers:
   '@aws-cdk/assert': 1.95.1
-  '@aws-cdk/aws-apigatewayv2': ~1.95.1
+  '@aws-cdk/aws-apigateway': ~1.95.1
   '@aws-cdk/aws-lambda': ~1.95.1
   '@aws-cdk/core': 1.95.1
   '@commitlint/cli': ^11.0.0
@@ -9057,6 +9070,7 @@ specifiers:
   '@types/aws-lambda': ~8.10.73
   '@types/jest': ^26.0.20
   '@types/node': 10.17.27
+  '@types/string': ~0.0.30
   '@typescript-eslint/eslint-plugin': ^4.15.1
   '@typescript-eslint/parser': ^4.15.1
   '@vitejs/plugin-vue': ^1.1.5
@@ -9078,6 +9092,7 @@ specifiers:
   prettier: 2.2.1
   source-map-support: ^0.5.16
   standard-version: ^9.1.1
+  string: ~3.3.3
   ts-jest: ^26.5.1
   ts-node: ^9.0.0
   ts-purify: ^2.0.1
