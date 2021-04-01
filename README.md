@@ -89,3 +89,10 @@ The problem is when with dependencies, the examples given by CDK document is ins
 FIX 1:
 
 apps/cdk-app/fix.sh copies dependencies to the build/lambdas dir and COULD solve the issue - however, the tree has too much other files and the size is too big, needs manual trim the files to a smaller size. Not really a solution but as a success proof of idea.
+
+SOLUTION 1: 
+
+Use NodejsFunction with local esbuild, see https://github.com/aws/aws-cdk/issues/6294#issuecomment-811550747
+Works really well. Check tag cdk-nodejs-function
+
+

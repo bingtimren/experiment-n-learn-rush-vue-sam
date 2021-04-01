@@ -2,6 +2,7 @@ dependencies:
   '@aws-cdk/assert': 1.95.1_jest@26.6.3
   '@aws-cdk/aws-apigateway': 1.95.1
   '@aws-cdk/aws-lambda': 1.95.1
+  '@aws-cdk/aws-lambda-nodejs': 1.95.1
   '@aws-cdk/core': 1.95.1
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
@@ -24,6 +25,7 @@ dependencies:
   commitizen: 4.2.3
   cz-conventional-changelog: 3.3.0
   dependency-cruiser: 9.24.0
+  esbuild: 0.11.2
   eslint: 7.22.0
   eslint-config-prettier: 8.1.0_eslint@7.22.0
   eslint-plugin-prettier: 3.3.1_44b94358ac15c7c093df3d5421ccc811
@@ -298,6 +300,16 @@ packages:
       node: '>= 10.13.0 <13 || >=13.7.0'
     resolution:
       integrity: sha512-BVMrVlKbDLxTNWwNMm7+muH98ucCU5U4K39m29XxO2DMw9PknIMHrxRZQYrGiNdBGskKKrIvYA1sNb+v7E6EjQ==
+  /@aws-cdk/aws-lambda-nodejs/1.95.1:
+    dependencies:
+      '@aws-cdk/aws-lambda': 1.95.1
+      '@aws-cdk/core': 1.95.1
+      constructs: 3.3.71
+    dev: false
+    engines:
+      node: '>= 10.13.0 <13 || >=13.7.0'
+    resolution:
+      integrity: sha512-q0vwVSeOJ+XStfL49ma317mnuw7H2DsGz7XP/X4rCzes2xReXbN99BcYtn2IoAdpTwHA1dYVNeYXNX9gqwmlqw==
   /@aws-cdk/aws-lambda/1.95.1:
     dependencies:
       '@aws-cdk/aws-applicationautoscaling': 1.95.1
@@ -3344,6 +3356,12 @@ packages:
       node: '>=0.4'
     resolution:
       integrity: sha1-q6jZ4ZQ6iVrJaDemKjmz9V7NlKs=
+  /esbuild/0.11.2:
+    dev: false
+    hasBin: true
+    requiresBuild: true
+    resolution:
+      integrity: sha512-8d5FCQrR+juXC2u9zjTQ3+IYiuFuaWyKYwmApFJLquTrYNbk36H/+MkRQeTuOJg7IjUchRX2Ulwo1zRYXZ1pUg==
   /esbuild/0.9.7:
     dev: false
     hasBin: true
@@ -8938,6 +8956,7 @@ packages:
       '@aws-cdk/aws-apigateway': 1.95.1
       '@aws-cdk/aws-apigatewayv2': 1.95.1
       '@aws-cdk/aws-lambda': 1.95.1
+      '@aws-cdk/aws-lambda-nodejs': 1.95.1
       '@aws-cdk/core': 1.95.1
       '@tsconfig/node14': 1.0.0
       '@types/aws-lambda': 8.10.73
@@ -8945,6 +8964,7 @@ packages:
       '@types/node': 10.17.27
       '@types/string': 0.0.30
       aws-cdk: 1.95.1
+      esbuild: 0.11.2
       jest: 26.6.3_ts-node@9.1.1
       source-map-support: 0.5.19
       string: 3.3.3
@@ -8954,7 +8974,7 @@ packages:
     dev: false
     name: '@rush-temp/cdk-app'
     resolution:
-      integrity: sha512-rAI68p4Vpq7YU0VsJrXHEaNqOGzmmovZKTWVJVfCCio4fBpw1HCnYvWvFvBQheWmP7iu1L8DjrS7b9r4mIFe7Q==
+      integrity: sha512-px9Qq2bs6bf5AS0xPstbspoGyIuN2qXm6Pd92kxRK6G0Rj6py85zGsx2kbfow4/qPSqQN3oM9rOj/W/WYAgVHA==
       tarball: file:projects/cdk-app.tgz
     version: 0.0.0
   file:projects/greeting.tgz_ts-node@9.1.1:
@@ -9058,6 +9078,7 @@ specifiers:
   '@aws-cdk/assert': 1.95.1
   '@aws-cdk/aws-apigateway': ~1.95.1
   '@aws-cdk/aws-lambda': ~1.95.1
+  '@aws-cdk/aws-lambda-nodejs': ~1.95.1
   '@aws-cdk/core': 1.95.1
   '@commitlint/cli': ^11.0.0
   '@commitlint/config-conventional': ^11.0.0
@@ -9080,6 +9101,7 @@ specifiers:
   commitizen: ^4.2.3
   cz-conventional-changelog: ^3.3.0
   dependency-cruiser: ^9.23.1
+  esbuild: ~0.11.2
   eslint: ^7.20.0
   eslint-config-prettier: ^8.0.0
   eslint-plugin-prettier: ^3.3.1
@@ -9092,7 +9114,7 @@ specifiers:
   prettier: 2.2.1
   source-map-support: ^0.5.16
   standard-version: ^9.1.1
-  string: ~3.3.3
+  string: ^3.3.3
   ts-jest: ^26.5.1
   ts-node: ^9.0.0
   ts-purify: ^2.0.1

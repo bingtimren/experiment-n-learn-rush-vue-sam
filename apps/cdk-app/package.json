@@ -5,28 +5,30 @@
     "cdk-app": "bin/cdk-app.js"
   },
   "scripts": {
-    "build-synth": "rm -fr build;rm -fr cdk.out;tsc --build tsconfig-lambdas.json;./fix.sh;cdk synth",
+    "build-synth": "rm -fr build;rm -fr cdk.out;cdk synth",
     "test": "jest"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.95.1",
+    "@tsconfig/node14": "~1.0.0",
+    "@types/aws-lambda": "~8.10.73",
     "@types/jest": "^26.0.20",
     "@types/node": "10.17.27",
+    "@types/string": "~0.0.30",
+    "aws-cdk": "1.95.1",
     "jest": "^26.6.3",
     "ts-jest": "^26.5.1",
-    "aws-cdk": "1.95.1",
     "ts-node": "^9.0.0",
-    "typescript": "^4.1.5",
-    "@types/aws-lambda": "~8.10.73",
-    "@tsconfig/node14": "~1.0.0",
-    "@types/string": "~0.0.30"
+    "typescript": "^4.1.5"
   },
   "dependencies": {
     "@aws-cdk/aws-apigateway": "~1.95.1",
     "@aws-cdk/aws-lambda": "~1.95.1",
+    "@aws-cdk/aws-lambda-nodejs": "~1.95.1",
     "@aws-cdk/core": "1.95.1",
     "@bingsjs/greeting": "~1.0.0-alpha.0",
     "source-map-support": "^0.5.16",
-    "string": "^3.3.3"
+    "string": "^3.3.3",
+    "esbuild": "0"
   }
 }

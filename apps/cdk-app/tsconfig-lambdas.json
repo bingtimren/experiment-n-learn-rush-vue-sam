@@ -1,9 +1,0 @@
-{
-    "extends": "@tsconfig/node14/tsconfig.json",
-    "include": ["resources/lambdas"],
-    "compilerOptions": {
-        "rootDir": "resources/lambdas",
-        "outDir": "build/lambdas",
-        "strict": true
-    }
-}
