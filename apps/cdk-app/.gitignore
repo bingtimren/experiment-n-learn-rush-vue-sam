@@ -9,3 +9,6 @@ cdk.out
 
 # build
 build
+
+# this will be generated
+template.yaml

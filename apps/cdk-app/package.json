@@ -5,7 +5,8 @@
     "cdk-app": "bin/cdk-app.js"
   },
   "scripts": {
-    "build-synth": "rm -fr build;rm -fr cdk.out;cdk synth",
+    "synth": "rm -fr build;rm -fr cdk.out;cdk synth",
+    "synth-sam-local-api": "rm -fr cdk.out;cdk synth --no-staging > template.yaml;sam local start-api",
     "test": "jest"
   },
   "devDependencies": {
