@@ -399,7 +399,7 @@
     },
     {
       "packageName":"vue-app",
-      "projectFolder": "apps/vue-app"
+      "projectFolder": "apps/vue3-vite-app"
     },
     {
       "packageName": "sam-app",
