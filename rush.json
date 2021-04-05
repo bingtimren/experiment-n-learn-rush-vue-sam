@@ -408,6 +408,10 @@
     {
       "packageName": "cdk-app",
       "projectFolder": "apps/cdk-app"
+    },
+    {
+      "packageName": "vue3-cli",
+      "projectFolder": "apps/vue3-cli"
     }
     // {
     //   /**
