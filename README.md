@@ -18,6 +18,15 @@ Lesson learnt:
 - 'rush update' and 'rush build' works well
 - once 'rush build', changes of 'word' is effective in 'greeting'. this is correct since 'greeting' refers to 'word' through absolute path and resolves to the type definition (index.d.ts) and code is linked to '.js', both files are result of build. changes become effective only after build.
 
+## Using Vetur
+
+In monorepo Vetur cannot find package.json / tsconfig.json and would not be able to figure things (such as Vue version) from these files. This causes issues such as reporting error at multi-root-element component (ok for Vue 3 not for Vue 2)
+
+https://vuejs.github.io/vetur/reference/#detail
+
+Add vetur.config.js at monorepo root solves this issue.
+
+
 ## Vue+Vite
 
 See https://github.com/vitejs/vite/issues/2697
