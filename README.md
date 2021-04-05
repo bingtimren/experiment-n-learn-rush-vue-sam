@@ -105,3 +105,12 @@ Use NodejsFunction with local esbuild, see https://github.com/aws/aws-cdk/issues
 Works really well. Check tag cdk-nodejs-function
 
 
+## Vue3 + Typescript
+
+To get started, follow instructions here: https://v3.vuejs.org/guide/typescript-support.html#project-creation
+1. vue create my-project-name 
+2. Choose "Manually select features", be sure to choose Typescript
+
+If Vue complain missing tslib, simply 'rush add -p tslib'
+
+When using linked package in monorepo, vue complains "Syntax Error: Error: No ESLint configuration found". For this reason .eslintignore is added with a line `**/rush/**` to ignore all linked packages
