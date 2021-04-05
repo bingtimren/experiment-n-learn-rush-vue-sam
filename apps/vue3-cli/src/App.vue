@@ -1,24 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <hr/>
-  Greeting component: <br/>
-  <Greeting/>  
+  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-import Greeting from './components/Greeting.vue'
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
+import HelloWorld from './components/HelloWorld.vue';
 
-export default {
-  name: 'App',
+@Options({
   components: {
     HelloWorld,
-    Greeting
-  }
-}
-
-
+  },
+})
+export default class App extends Vue {}
 </script>
 
 <style>
