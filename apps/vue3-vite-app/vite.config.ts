@@ -1,16 +1,17 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import path from 'path'
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
   optimizeDeps: {
     include: ['@bingsjs/greeting']
-  },  
-  resolve: {
-    alias: {
-      '@bingsjs/greeting': path.dirname(require.resolve('@bingsjs/greeting'))
+  },
+  build: {
+    rollupOptions: {
+      plugins:[ resolve(), commonjs()]
     }
   }
 })

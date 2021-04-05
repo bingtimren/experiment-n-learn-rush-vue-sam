@@ -29,7 +29,9 @@ Add vetur.config.js at monorepo root solves this issue.
 
 ## Vue+Vite
 
-See https://github.com/vitejs/vite/issues/2697
+I submitted an issue for what I encountered. See https://github.com/vitejs/vite/issues/2697
+
+**(1) Vite setup out-of-box has issue with linked packages by rush**
 
 After `rush update`, change to /apps/vue-app directory, run `pnpm dev` and check local webpage. Console shows "Uncaught SyntaxError: The requested module '/@fs/home/bing/tech-playground/rush/libs/greeting/build/main/index.js' does not provide an export named 'greeting'"
 
@@ -57,10 +59,20 @@ CONCLUSION: Vite has problem with rush's SYMBOL LINKING but has no problem with 
 
 Try building, restore state to after `rush update`, run `npx vite build`, error. 
 
-THE WORK-AROUND:
+**THE WORK-AROUND:**
 
 add linked modules to "optimizeDeps.include" in vite.config.ts. This makes dev works but build still does NOT work
 
+add to vite.config.ts
+```
+  build: {
+    rollupOptions: {
+      plugins:[ resolve(), commonjs()]
+    }
+  }
+```  
+
+Then build also works. See the work arounds in the reported issue.
 
 ## SAM
 
