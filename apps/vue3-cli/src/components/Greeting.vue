@@ -8,6 +8,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import {greeting} from "@bingsjs/greeting"
+import S from "string";
 export default defineComponent({
   name: 'Greeting',
   props: {
@@ -22,7 +23,7 @@ export default defineComponent({
   },
   methods: {
     greeting(name:string) {
-      return greeting(name)
+      return greeting(S(name).titleCase().toString());
     }
   } 
 })
