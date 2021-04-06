@@ -4,7 +4,7 @@
  */
 import { WORD } from '@bingsjs/word';
 /**
- * Just an example
+ * Just an example function
  */
 export function greeting(name: string): string {
     return `${WORD}, ${name}`;

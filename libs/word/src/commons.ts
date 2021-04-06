@@ -6,4 +6,4 @@
 /**
  * Just an example
  */
-export const WORD = 'Hi-Ho-Hey';
+export const WORD = 'Hey';
