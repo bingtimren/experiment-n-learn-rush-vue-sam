@@ -125,4 +125,14 @@ To get started, follow instructions here: https://v3.vuejs.org/guide/typescript-
 
 If Vue complain missing tslib, simply 'rush add -p tslib'
 
-When using linked package in monorepo, vue complains "Syntax Error: Error: No ESLint configuration found". For this reason .eslintignore is added with a line `**/rush/**` to ignore all linked packages
+** Issue and work around **
+
+When using linked package in monorepo, vue build complains "Syntax Error: Error: No ESLint configuration found". 
+Solution is to add .eslintignore with two lines:
+
+```
+**/rush/**
+**/build/module/**/*.js
+```
+
+First line solves the above issue. Second line solves another strange issue: build would only success in the second time....

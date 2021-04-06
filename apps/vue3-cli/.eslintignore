@@ -1,4 +1,5 @@
 /* to exclude symbol linked packages in */
 
 **/rush/**
+**/build/module/**/*.js
 
