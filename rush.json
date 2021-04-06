@@ -391,7 +391,8 @@
   "projects": [
     {
       "packageName": "@bingsjs/word",
-      "projectFolder": "libs/word"
+      "projectFolder": "libs/word",
+      "shouldPublish": true
     },
     {
       "packageName": "@bingsjs/greeting",
