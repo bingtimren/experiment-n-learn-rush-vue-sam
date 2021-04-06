@@ -52,7 +52,7 @@
     "build": "mkdir -p build/main; run-s build:*",
     "build:purity": "ts-purify -s src -d build/main",
     "build:compile": "tsc --build config/tsconfig-build.json",
-    "build:compile-module": "tsc --build config/tsconfig-build.json",
+    "build:compile-module": "tsc --build config/tsconfig-build-module.json",
     "?watch:test": "Watch file changes and run related tests",
     "watch:test": "jest -c config/jest.config.js --watch",
     "doc": "run-s doc:html doc:gh-fix cov doc:open",
