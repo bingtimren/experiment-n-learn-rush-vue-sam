@@ -1,13 +1,14 @@
 <template>
   <p>What's your name? <input type="text" v-model="name"/></p>
   <p>
-    Greetings: {{ greeting(name) }}{{terminator}}
+    Greetings: {{ greet(name) }}{{terminator}}
   </p>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import {greeting} from "@bingsjs/greeting"
+import { defineComponent } from 'vue';
+import {greeting} from "@bingsjs/greeting";
+import S from 'string';
 export default defineComponent({
   name: 'Greeting',
   props: {
@@ -21,8 +22,8 @@ export default defineComponent({
     return { name : "Stranger"}
   },
   methods: {
-    greeting(name:string) {
-      return greeting(name)
+    greet(name:string) {
+      return greeting(S(name).titleCase().toString())
     }
   } 
 })
