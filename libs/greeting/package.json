@@ -1,6 +1,6 @@
 {
   "name": "@bingsjs/greeting",
-  "version": "1.0.0-alpha.0",
+  "version": "0.1.0",
   "description": "A Typescript project template",
   "main": "build/main/index.js",
   "module": "build/module/index.js",
