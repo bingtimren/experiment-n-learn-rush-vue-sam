@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../libs"
+		},
+		{
+			"path": "../apps/cdk-app"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"rush.json": "jsonc",
+			"common-versions.json": "jsonc",
+			"artifactory.json": "jsonc",
+			"version-policies.json": "jsonc",
+			"experiments.json":"jsonc"
+		},
+		"cSpell.words": [
+			"bingsjs"
+		]
+	}
+}
