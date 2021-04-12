@@ -16,7 +16,8 @@
 			"common-versions.json": "jsonc",
 			"artifactory.json": "jsonc",
 			"version-policies.json": "jsonc",
-			"experiments.json":"jsonc"
+			"experiments.json":"jsonc",
+			"command-line.json":"jsonc"
 		},
 		"cSpell.words": [
 			"bingsjs"

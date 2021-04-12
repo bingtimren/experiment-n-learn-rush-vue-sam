@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "vue": "^3.0.5",
-    "@bingsjs/greeting": "~1.0.0-alpha.0",
+    "@bingsjs/greeting": "0.1.0",
     "string": "^3.3.3"
   },
   "devDependencies": {
