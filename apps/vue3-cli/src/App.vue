@@ -7,15 +7,15 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "./components/HelloWorld.vue";
-import Greeting from "./components/Greeting.vue";
+import { Options, Vue } from 'vue-class-component';
+import HelloWorld from './components/HelloWorld.vue';
+import Greeting from './components/Greeting.vue';
 
 @Options({
   components: {
     HelloWorld,
-    Greeting,
-  },
+    Greeting
+  }
 })
 export default class App extends Vue {}
 </script>

@@ -4,25 +4,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import { greeting } from "@bingsjs/greeting";
-import S from "string";
+import { defineComponent } from 'vue';
+import { greeting } from '@bingsjs/greeting';
+import S from 'string';
 export default defineComponent({
-  name: "Greeting",
+  name: 'Greeting',
   props: {
     terminator: {
       type: String,
       required: false,
-      default: "!",
-    },
+      default: '!'
+    }
   },
   data() {
-    return { name: "Stranger" };
+    return { name: 'Stranger' };
   },
   methods: {
     greet(name: string) {
       return greeting(S(name).titleCase().toString());
-    },
-  },
+    }
+  }
 });
 </script>

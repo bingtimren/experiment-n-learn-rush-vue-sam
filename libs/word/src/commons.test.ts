@@ -1,7 +1,7 @@
-import * as commons from "./commons";
+import * as commons from './commons';
 
-describe("Example Test Suite", () => {
-  it("Example test case", () => {
-    expect(typeof commons.WORD).toEqual("string");
+describe('Example Test Suite', () => {
+  it('Example test case', () => {
+    expect(typeof commons.WORD).toEqual('string');
   });
 });
