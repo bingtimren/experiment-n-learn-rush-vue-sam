@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "../apps/cdk-app"
+		},
+		{
+			"path": "../apps"
 		}
 	],
 	"settings": {
