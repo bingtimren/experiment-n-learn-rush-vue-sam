@@ -11,6 +11,7 @@
     "jest": "^26.6.3"
   },
   "scripts": {
-    "build": "echo done"
+    "build": "echo nothing to build",
+    "test":"echo nothing to test"
   }
 }
