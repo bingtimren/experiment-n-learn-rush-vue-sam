@@ -74,7 +74,7 @@
     }
   },
   "dependencies": {
-    "@bingsjs/word": "0.1.0"
+    "@bingsjs/word": "0.2.0"
   },
   "publishConfig": {
     "registry": "http://localhost:4873"
