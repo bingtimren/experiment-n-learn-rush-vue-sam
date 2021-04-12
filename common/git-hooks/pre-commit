@@ -3,9 +3,22 @@
 # exit with non-zero status after issuing an appropriate message if
 # it wants to stop the commit.
 
+# check if we have something to commit before doing other heavy checks
+count=`git diff --cached --name-status|wc -l`
+
+if [ $count = 0 ];
+then
+  echo "Nothing to commit. Forgot git add?";
+  exit 1
+fi
+
+# rush build & rush test, make sure every projects builds and passes tests before commit
+
+node common/scripts/install-run-rush.js build
+node common/scripts/install-run-rush.js test
+
 # Invoke the "rush prettier" custom command to reformat files whenever they
 # are committed. The command is defined in common/config/rush/command-line.json
 # and uses the "rush-prettier" autoinstaller.
-node common/scripts/install-run-rush.js build
-node common/scripts/install-run-rush.js test
+
 node common/scripts/install-run-rush.js prettier || exit $?
