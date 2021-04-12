@@ -7,9 +7,6 @@
 			"path": "../libs"
 		},
 		{
-			"path": "../apps/cdk-app"
-		},
-		{
 			"path": "../apps"
 		}
 	],
