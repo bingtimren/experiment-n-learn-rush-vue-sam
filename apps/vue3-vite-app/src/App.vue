@@ -1,23 +1,23 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <hr/>
-  Greeting component: <br/>
-  <Greeting/>
+  <hr />
+  Greeting component: <br />
+  <Greeting />
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
-import Greeting from './components/Greeting.vue'
+import { defineComponent } from "vue";
+import HelloWorld from "./components/HelloWorld.vue";
+import Greeting from "./components/Greeting.vue";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: {
     HelloWorld,
-    Greeting
-  }
-})
+    Greeting,
+  },
+});
 </script>
 
 <style>
