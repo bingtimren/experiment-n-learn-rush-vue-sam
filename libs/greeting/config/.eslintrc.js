@@ -7,15 +7,12 @@ module.exports = {
   },
   ignorePatterns: ['**/*.test.ts'],
   plugins: ['@typescript-eslint'],
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
   rules: {
     // fixable rules
     'no-extra-parens': 'error', // no extra parentheses
     curly: 'error', // enforce consistent brace style
-    eqeqeq: 'error', // require using '===' and '!=='
+    eqeqeq: 'error' // require using '===' and '!=='
   }
   /* Example Rules
   "rules": {
