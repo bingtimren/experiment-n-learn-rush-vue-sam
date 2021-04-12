@@ -6,29 +6,16 @@ module.exports = {
     sourceType: 'module' // Allows for the use of imports
   },
   ignorePatterns: ['**/*.test.ts'],
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
-    'plugin:prettier/recommended' // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
   rules: {
     // fixable rules
     'no-extra-parens': 'error', // no extra parentheses
     curly: 'error', // enforce consistent brace style
     eqeqeq: 'error', // require using '===' and '!=='
-    'prettier/prettier': [
-      'error', // from eslint-plugin-prettier installation
-      {
-        // prettier rules
-        semi: true,
-        trailingComma: 'all',
-        singleQuote: true,
-        printWidth: 120,
-        tabWidth: 4
-      }
-    ]
   }
   /* Example Rules
   "rules": {
