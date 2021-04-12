@@ -12,6 +12,12 @@ then
   exit 1
 fi
 
+# check if change has been logged
+if ! rush change -v;
+then
+  exit 1
+fi
+
 # rush build & rush test, make sure every projects builds and passes tests before commit
 
 node common/scripts/install-run-rush.js build
