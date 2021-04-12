@@ -12,6 +12,6 @@
   },
   "scripts": {
     "build": "echo nothing to build",
-    "test":"echo nothing to test"
+    "test": "echo nothing to test"
   }
 }
